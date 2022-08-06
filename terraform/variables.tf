@@ -114,7 +114,7 @@ variable "node_disk_location" {
 variable "template_vm_name" {
   description = "Name of the template VM"
   type        = string
-  default     = "ubuntu-cloud"
+  default     = "ubuntu-cloud-focal"
 }
 
 variable "master_ips" {
