@@ -1,5 +1,5 @@
 #! /bin/sh
-. ./build-vars
+. ./vars
 # Clean up any previous build
 rm ${install_dir}${image_name}
 rm ${install_dir}build-info

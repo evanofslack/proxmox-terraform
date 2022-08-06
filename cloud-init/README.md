@@ -1,11 +1,20 @@
-# Cloud-init
+# Proxmox VM Template
 
-Process of creating a pve template from cloud-init image for spinning up future VMs.
+Create proxmox VM templates from cloud-init images. 
+
+### Automated Script
+
+[Guide](https://gtgb.io/2022/07/23/proxmox-vm-templating/)
+
+Change variables in `vars` then:
+
+```bash
+sh ./build-image.sh
+```
+
+### Manual Setup
 
 [Guide](https://docs.technotim.live/posts/cloud-init-cloud-image/)
-
-
-## Manual Setup
 
 Choose cloud image:
 [Ubuntu](https://cloud-images.ubuntu.com/)
