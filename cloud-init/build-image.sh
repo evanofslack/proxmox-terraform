@@ -1,5 +1,7 @@
 #! /bin/sh
 . ./vars
+# The libguestfs-tools package must be installed to modify the cloud images
+apt-get install libguestfs-tools
 # Clean up any previous build
 rm ${install_dir}${image_name}
 rm ${install_dir}build-info
