@@ -14,8 +14,8 @@ resource "proxmox_vm_qemu" "proxmox_vm_master" {
     storage = var.master_disk_location
     iothread = 1
   }
-  # If we want DHCP to assign IP comment this out
   # ipconfig0 = "ip=${var.master_ips[count.index]}/${var.networkrange},gw=${var.gateway}"
+  ipconfig0 = "ip=dhcp,gw=${var.gateway}"
 
   lifecycle {
     ignore_changes = [
@@ -43,8 +43,8 @@ resource "proxmox_vm_qemu" "proxmox_vm_workers" {
     storage = var.node_disk_location
     iothread = 1
   }
-  # If we want DHCP to assign IP comment this out
   # ipconfig0 = "ip=${var.worker_ips[count.index]}/${var.networkrange},gw=${var.gateway}"
+  ipconfig0 = "ip=dhcp,gw=${var.gateway}"
 
   lifecycle {
     ignore_changes = [
