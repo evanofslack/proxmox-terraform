@@ -7,6 +7,8 @@ resource "proxmox_vm_qemu" "proxmox_vm_master" {
   agent       = 1
   memory      = var.num_masters_mem
   cores       = var.num_masters_core
+  onboot      = true
+  
   disk {
     slot = 0
     size = var.master_disk_size

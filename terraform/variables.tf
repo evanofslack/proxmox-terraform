@@ -41,7 +41,7 @@ variable "master_name" {
 
 variable "num_masters" {
   description = "Enter the number of Master VMs you want"
-  default = 2
+  default = 3
 }
 
 variable "num_masters_core" {
@@ -51,7 +51,7 @@ variable "num_masters_core" {
 
 variable "num_masters_mem" {
   description = "Enter the value for the amount of RAM for your masters. ie. 4096"
-  default = "4096"
+  default = "8192"
 }
 
 variable "master_disk_size" {
@@ -94,7 +94,7 @@ variable "num_nodes_mem" {
 }
 
 variable "node_disk_size" {
-  description = "Enter the size of your Master node disks ie. 80G"
+  description = "Enter the size of your worker node disks ie. 80G"
   type        = string
   default     = "50G"
 }
@@ -121,8 +121,9 @@ variable "master_ips" {
   description = "List of ip addresses for master nodes"
   type        = list(string)
   default     = [
-  "10.33.1.102", 
-  "10.33.1.103",
+  "10.33.1.200", 
+  "10.33.1.201",
+  "10.33.1.202"
   ]
 }
 
@@ -130,9 +131,9 @@ variable "worker_ips" {
   description = "List of ip addresses for worker nodes"
   type        = list(string)
   default     = [  
-    "10.33.1.104", 
-    "10.33.1.105",
-    "10.33.1.106",
+    "10.33.1.203",
+    "10.33.1.204",
+    "10.33.1.205", 
   ]
 }
 

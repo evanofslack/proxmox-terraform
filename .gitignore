@@ -34,3 +34,5 @@ override.tf.json
 
 # ssh public key
 keyfile
+
+*.ini
